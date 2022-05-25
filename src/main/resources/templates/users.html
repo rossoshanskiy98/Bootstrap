@@ -237,7 +237,7 @@
                                 <br>
 
                                 <label for="role" class="form-label"><b>Role: </b></label>
-                                <select class="form-select" id="role" name="newUserRoles" multiple aria-label="multiple select example">
+                                <select class="form-select" id="role" name="newUserRoles" required multiple aria-label="multiple select">
                                     <option th:each="role : ${allRoles}" th:value="${role.getName()}" th:text="${role.getShortRole()}">roles</option>
                                 </select>
 

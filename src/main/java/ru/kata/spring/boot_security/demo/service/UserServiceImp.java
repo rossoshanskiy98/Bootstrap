@@ -31,7 +31,6 @@ public class UserServiceImp implements UserService {
     public void add(User user) {
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-        user.setRoleSet(Collections.singleton(roleRepository.getRoleById(2L)));
         userRepository.saveAndFlush(user);
     }
 
